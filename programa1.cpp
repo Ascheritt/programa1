@@ -3,15 +3,12 @@ using namespace std;
 
 int main()
 {
-
-}
-
-/*	const int max = 10;
+	const int max = 10;
 	int numero[max];
 	int maior;
 	int menor;
 
-	cout << "Descubra o maior e o menor numero dentre " << max << " numeros!" << endl << endl;
+	cout << "Descubra o maior e o menor numero dentre " << max << "!" << endl << endl;
 	system("pause");
 	system("cls");
 
@@ -33,28 +30,85 @@ int main()
 					cout << "Digite um numero diferente dos anteriores:" << endl;
 					cin >> numero[i];
 				}
+				if (ii == 1) {
+					for (int f = ii; f < i; f++) {
+						while (numero[i] == numero[f]) {
+							cout << "Digite um numero diferente dos anteriores:" << endl;
+							cin >> numero[i];
+							ii = f; 
+						}
+					}
+				}
 			}
-			if (i == 1) {
-				if (numero[i] > maior) {
-					maior = numero[i];
-				}
-				else {
-					menor = numero[i];
-				}
+	
+			if (numero[i] > maior) {
+				maior = numero[i];
 			}
-			else {
-				if (numero[i] > maior) {
-					maior = numero[i];
-				}
-				else if (numero[i] < menor) {
+
+			else if (numero[i] < menor) {
 					menor = numero[i];
-				}
 			}
 		}
 	}
+	
+	cout << "\nO maior numero e: " << maior << endl
+		 << "O menor numero e: " << menor << endl;
+}
 
-	cout << "\nO maior numero e " << maior << endl
-		 << "O menor numero e " << menor << endl;*/
+/*	const int max = 10;
+	int numero[max];
+	int maior;
+	int menor;
+
+	cout << "Descubra o maior e o menor numero dentre " << max << "!" << endl << endl;
+	system("pause");
+	system("cls");
+
+	cout << "Digite dez numeros diferentes" << endl;
+
+	for (int i = 0; i < max; i++) {
+
+		cout << "Digite o " << (i + 1) << ". numero: " << endl;
+		cin >> numero[i];
+
+		if (i == 0) {
+			maior = numero[i];
+			menor = maior;
+		}
+
+		else {
+			for (int ii = i; ii > 0; ii--) {
+				while (numero[i] == numero[ii - 1]) {
+					cout << "Digite um numero diferente dos anteriores:" << endl;
+					cin >> numero[i];
+				}
+				if (ii == 1) {
+					for (int f = ii; f < i; f++) {
+						while (numero[i] == numero[f]) {
+							cout << "Digite um numero diferente dos anteriores:" << endl;
+							cin >> numero[i];
+							ii = f; 
+						}
+					}
+				}
+			}
+	
+			if (numero[i] > maior) {
+				maior = numero[i];
+			}
+
+			else if (numero[i] < menor) {
+					menor = numero[i];
+			}
+		}
+	}
+	
+	cout << "\nO maior numero e: " << maior << endl
+		 << "O menor numero e: " << menor << endl;
+
+*/
+
+
 
 /*
 	int n;
