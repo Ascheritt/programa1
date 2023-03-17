@@ -1,38 +1,66 @@
 #include <iostream>
 using namespace std;
 
-
-void pulaLinha() {
-	cout << endl;
-}
-
-
 int main()
 {
-	
-	/*const int max = 10;
+
+}
+
+/*	const int max = 10;
 	int numero[max];
 	int maior;
 	int menor;
 
-	cout << "Descubra qual numero é o maior e qual e o menor!" << endl;
+	cout << "Descubra o maior e o menor numero dentre " << max << " numeros!" << endl << endl;
 	system("pause");
 	system("cls");
 
 	cout << "Digite dez numeros diferentes" << endl;
 
 	for (int i = 0; i < max; i++) {
+
+		cout << "Digite o " << (i + 1) << ". numero: " << endl;
 		cin >> numero[i];
-		if (i != 0) {
-			if ()
+
+		if (i == 0) {
+			maior = numero[i];
+			menor = maior;
+		}
+
+		else {
+			for (int ii = i; ii > 0; ii--) {
+				while (numero[i] == numero[ii - 1]) {
+					cout << "Digite um numero diferente dos anteriores:" << endl;
+					cin >> numero[i];
+				}
+			}
+			if (i == 1) {
+				if (numero[i] > maior) {
+					maior = numero[i];
+				}
+				else {
+					menor = numero[i];
+				}
+			}
+			else {
+				if (numero[i] > maior) {
+					maior = numero[i];
+				}
+				else if (numero[i] < menor) {
+					menor = numero[i];
+				}
+			}
 		}
 	}
-	*/
 
+	cout << "\nO maior numero e " << maior << endl
+		 << "O menor numero e " << menor << endl;*/
+
+/*
 	int n;
 	int soma = 1;
 	int cont = 1;
-	
+
 	while (cont == 1) {
 
 		cout << "Digite um numero" << endl;
@@ -74,81 +102,30 @@ int main()
 
 		system("cls");
 	}
+	*/
 
 
 
-
-
-	/*while (i < n) {
+/*while (i < n) {
 			soma = soma + (++i);
-		}*/
+		}
+*/
 
-	/*cout << i << " + ";
+
+
+
+/*cout << i << " + ";
 
 	if (i != n2) {
 		soma = soma + (i + 1);
 	}
+
 	else {
 		cout << i << " + ";
 		soma = soma + (i + 1);
 		cout << n << " = " << soma << endl;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	*/
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*cout << "Programa X" << endl;
-
-	system("pause");
-
-	system("cls");
-
-	int x;
-
-	cin >> x;
-
-	while (x != 10) {
-
-	}
-	cout << "O que deseja fazer?" << endl;*/
-
-
+*/
 
 
 
