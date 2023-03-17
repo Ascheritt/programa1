@@ -2,6 +2,10 @@
 using namespace std;
 
 
+void pulaLinha() {
+	cout << endl;
+}
+
 
 int main()
 {
@@ -29,28 +33,46 @@ int main()
 	int soma = 1;
 	int cont = 1;
 	
-	while (cont != 0) {
+	while (cont == 1) {
+
 		cout << "Digite um numero" << endl;
 		cin >> n;
-		int m = n - 2;
-		int o = n - 1;
 
-		for (int i = 1; i < n; i++) {
-			if (i < m) {
-				cout << i << " + ";
-				soma = soma + (i + 1);
-			}
-			else if (i == o) {
-				int j = i + 1;
-				cout << j << " = "; 
-				soma = soma + (i + 1);
-			}
-			
+		while (n <= 1) {
+			system("cls");
+			cout << "Digite um numero inteiro e positivo diferente de 1:" << endl;
+			cin >> n;
 		}
-		cout << soma << endl;
 
-		cout << "Deseja continuar? " << endl;
+		if (n == 2) {
+			cout << "1 + 2 = 3";
+		}
+
+		else {
+			for (int i = 1; i <= n; i++) {
+
+				if (i == 1) {
+					cout << i << " + ";
+				}
+
+				else {
+					soma = soma + i;
+
+					if (i < n) {
+						cout << i << " + ";
+					}
+
+					else {
+						cout << i << " = " << soma;
+					}
+				}
+			}
+		}
+
+		cout << "\nDeseja continuar?" << endl << "Se sim, digite 1, caso contrario, digite um numero qualquer:" << endl;
 		cin >> cont;
+
+		system("cls");
 	}
 
 
@@ -61,9 +83,33 @@ int main()
 			soma = soma + (++i);
 		}*/
 
+	/*cout << i << " + ";
+
+	if (i != n2) {
+		soma = soma + (i + 1);
+	}
+	else {
+		cout << i << " + ";
+		soma = soma + (i + 1);
+		cout << n << " = " << soma << endl;
+	}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+	*/
 
 
 
