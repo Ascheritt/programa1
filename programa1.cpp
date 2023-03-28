@@ -8,7 +8,91 @@ struct lista {
 
 int main()
 {
-	cout << "Descubra o maior e o menor numero dentre todos os que digitar!" << endl << endl;
+	const int max = 10;
+	int numero[max];
+	int aux;
+
+	cout << "Descubra o maior e o menor numero dentre " << max << "!" << endl << endl;
+	system("pause");
+	system("cls");
+
+	cout << "Digite dez numeros diferentes" << endl;
+
+	for (int i = 0; i < max; i++) {
+
+		cout << "Digite o " << (i + 1) << ". numero: " << endl;
+		cin >> numero[i];
+
+		if (i != 0) {
+			for (int ii = i; ii > 0; ii--) {
+				while (numero[i] == numero[ii - 1]) {
+					cout << "Digite um numero diferente dos anteriores:" << endl;
+					cin >> numero[i];
+				}
+				if (ii == 1) {
+					for (int f = ii; f < i; f++) {
+						while (numero[i] == numero[f]) {
+							cout << "Digite um numero diferente dos anteriores:" << endl;
+							cin >> numero[i];
+							ii = f;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	for (int i = 0; i < (max - 1); i++) {
+
+		int k;
+
+		for (int ii = 1; ii < max; ii++) {
+			if (numero[i] > numero[i + 1]) {
+				aux = numero[i + 1];
+				numero[i + 1] = numero[i];
+				numero[i] = aux;
+			}
+			if (ii == (max - 1)) {
+				k = ii;
+			}
+		}
+
+		if (k == (max - 1)) {
+			for (int ii = k; ii > 0; ii--) {
+				if (numero[ii] < numero[i]) {
+					aux = numero[i];
+					numero[i] = numero[ii];
+					numero[ii] = aux;
+				}
+			}
+		}
+
+	}
+
+	cout << endl;
+
+	for (int i = 0; i < max; i++) {
+		cout << numero[i] << " ";
+	}
+}
+
+
+/*
+
+
+for (int ii = 1; ii < max; ii++) {
+
+		}
+
+		if (numero[i] > numero[i + 1]) {
+			aux = numero[i + 1];
+			numero[i + 1] = numero[i];
+			numero[i] = aux;
+		}
+
+
+
+cout << "Descubra o maior e o menor numero dentre todos os que digitar!" << endl << endl;
 	system("pause");
 	system("cls");
 
@@ -53,7 +137,7 @@ int main()
 	}
 
 	lista* jun = primeiro;
-	
+
 	while (jun->prox != NULL) {
 		if (jun->valor > jun->prox->valor) {
 			lista* aux = (lista*)malloc(sizeof(lista));
@@ -68,13 +152,8 @@ int main()
 		cout << jun->valor << " ";
 		jun = jun->prox;
 	}
-	
+*/
 
-
-
-
-
-}
 
 /*	const int max = 10;
 	int numero[max];
