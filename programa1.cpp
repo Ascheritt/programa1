@@ -307,3 +307,25 @@ cout << "Descubra o maior e o menor numero dentre todos os que digitar!" << endl
 		cout << "Os numeros sao iguais";
 	}
 	*/
+
+
+	/*
+	else {
+			while (aux->prox != NULL) {
+				if (aux->prox->valor > novo->valor) {
+					break;
+				}
+				aux = aux->prox;
+			}
+
+			if (aux->prox == NULL)
+			{
+				aux->prox = novo;
+			}
+
+			else
+			{
+				novo->prox = aux->prox;
+				aux->prox = novo;
+			} 
+	*/
