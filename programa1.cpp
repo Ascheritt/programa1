@@ -40,8 +40,39 @@ int main()
 				}
 			}
 		}
+
+		if (i != 0) {
+			if (numero[i - 1] > numero[i]) {
+				int aux = numero[i];
+				numero[i] = numero[i - 1];
+				numero[i - 1] = aux;
+			}
+
+			else {
+				int aux = numero[i];
+				for (int i2 = 0; i2 < i; i2++) {
+					if (numero[i2] > aux) { 
+						if ((i2 - 1) == -1) {
+							int aux2; 
+							for (int i3 = 0; i3 <= i; i3++) {
+								if (i3 == 0) {
+									aux2 = numero[i3];
+									numero[i3] = aux;
+								}
+								else {
+									aux = numero[i3];
+									numero[i3] = aux2;
+								}
+							}	
+							break;
+						}
+					}
+				}
+			}
+		}
 	}
 
+	/*
 	for (int i = 0; i < (max - 1); i++) {
 
 		int k;
@@ -67,7 +98,7 @@ int main()
 			}
 		}
 
-	}
+	}*/
 
 	cout << endl;
 
