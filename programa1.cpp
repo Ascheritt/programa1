@@ -360,3 +360,23 @@ cout << "Descubra o maior e o menor numero dentre todos os que digitar!" << endl
 				aux->prox = novo;
 			} 
 	*/
+
+	/*
+
+Pilha (Stack)
+
+LIFO -- Last In 
+		First Out
+
+Push (colocar elemento no topo)
+
+Pop (remover elemento do topo)
+
+x-----------------x
+
+Fila (Queue)
+
+FIFO -- First In 
+		First Out
+
+*/
